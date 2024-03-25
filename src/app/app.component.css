@@ -1,0 +1,57 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.titlebar {
+  height: 40px;
+  background: var(--tui-base-01);
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titlebar-title {
+  margin-left: 1rem;
+}
+
+.titlebar-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.titlebar-button:hover {
+  background: var(--tui-primary);
+}
+
+.titlebar-button-close:hover {
+  background: #ff0000;
+}
+
+.container {
+  padding: 1rem 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  gap: 1rem;
+}
+
+app-list {
+  width: 250px;
+  min-width: 250px;
+  max-width: 250px;
+  display: flex;
+}
+
+app-editor {
+  flex: 1;
+  min-width: 300px;
+  overflow: hidden;
+}
+

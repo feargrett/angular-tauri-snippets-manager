@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+tui-elastic-container {
+  flex: 1;
+}
+
+.wrapper {
+  cursor: pointer;
+  border-radius: var(--tui-radius-m);
+  transition: background .1s ease-in-out;
+}
+
+.wrapper:hover,
+.selected {
+  background: var(--tui-primary);
+}
+
+.wrapper button {
+  opacity: 0;
+  transition: opacity .1s ease-in-out;
+}
+
+.wrapper:hover button,
+.selected button {
+  opacity: 1;
+}
+
+.wrapper-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .25rem .75rem;
+}

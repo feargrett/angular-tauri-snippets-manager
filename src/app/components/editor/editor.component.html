@@ -1,0 +1,15 @@
+@if (snippetStore.selectedSnippet()) {
+  <ngx-monaco-editor [options]="editorOptions" 
+                     [ngModel]="code()"
+                     (ngModelChange)="snippetStore.updateSnippetContent(name(), $event)"
+  >
+  </ngx-monaco-editor>
+} @else {
+  <div class="empty">
+    <tui-marker-icon src="tuiIconEditLarge"
+                     size="xl"
+                     class="custom">
+    </tui-marker-icon>
+    <h2>Select a snippet to edit</h2>
+  </div>
+}

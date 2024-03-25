@@ -1,0 +1,25 @@
+<tui-theme-night></tui-theme-night>
+<tui-root>
+  <div class="main">
+    <div data-tauri-drag-region class="titlebar">
+      <div class="titlebar-title">
+        <h3>Snippets Manager</h3>
+      </div>
+      <div class="titlebar-options">
+        <div class="titlebar-button" (click)="minimize()">
+          <tui-svg src="tuiIconMinus"></tui-svg>
+        </div>
+        <div class="titlebar-button" (click)="toggleSize()">
+          <tui-svg [src]="isMaximized() ? 'tuiIconMinimize' : 'tuiIconMaximize'"></tui-svg>
+        </div>
+        <div class="titlebar-button titlebar-button-close" (click)="close()">
+          <tui-svg src="tuiIconClose"></tui-svg>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <app-list></app-list>
+      <app-editor></app-editor>
+    </div>
+  </div>
+</tui-root>

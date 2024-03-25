@@ -1,0 +1,51 @@
+<div class="container">
+  <form
+    [formGroup]="newSnippetForm"
+    (ngSubmit)="addSnippet()"
+  >
+    <p>
+        <tui-input
+            formControlName="name"
+            tuiTextfieldSize="m"
+            [tuiTextfieldCleaner]="true"
+            [tuiTextfieldLabelOutside]="true"
+        >
+            Name of the new snippet
+            <input
+                autocomplete="off"
+                tuiTextfield
+                type="text"
+            />
+        </tui-input>
+        <button
+            type="submit"
+            style="display: none;"
+        ></button>
+    </p>
+  </form>
+  <tui-scrollbar>
+    <tui-elastic-container>
+      @for (snippet of snippetStore.snippetFiles(); track $index) {
+        <div
+            class="wrapper"
+            [class.selected]="snippet.selected"
+            (click)="snippetStore.setSelectedSnippet(snippet.name)"
+        >
+            <h4 class="wrapper-data">
+                {{ snippet.name }}
+                <button
+                    appearance="flat"
+                    icon="tuiIconTrash"
+                    shape="rounded"
+                    size="s"
+                    title="Remove"
+                    tuiIconButton
+                    class="remove"
+                    (click)="removeSnippet(snippet.name)"
+                ></button>
+            </h4>
+        </div>
+      }
+    </tui-elastic-container>
+  </tui-scrollbar>
+</div>

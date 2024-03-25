@@ -1,0 +1,10 @@
+:root {
+  --tui-base-01: #1e1e1e !important;
+  --tui-primary: rgb(0, 102, 255) !important;
+  --tui-primary-hover: rgb(4, 95, 231) !important;
+  --tui-primary-active: rgb(0, 84, 211) !important;
+  --tui-accent: #ff3d00 !important;
+  --tui-accent-hover: #e63600 !important;
+  --tui-accent-active: #ce3000 !important;
+  --tui-link: rgb(255, 255, 255) !important;
+}
